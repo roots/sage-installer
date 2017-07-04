@@ -5,6 +5,7 @@ namespace Roots\Sage\Installer\Console\Commands;
 use Illuminate\Filesystem\Filesystem;
 use InvalidArgumentException;
 use Roots\Sage\Installer\Presets\Bootstrap;
+use Roots\Sage\Installer\Presets\Bulma;
 use Roots\Sage\Installer\Presets\FontAwesome;
 use Roots\Sage\Installer\Presets\Foundation;
 use Roots\Sage\Installer\Presets\None;
@@ -124,6 +125,7 @@ class PresetCommand extends Command
         return [
             new None($this->root),
             new Bootstrap($this->root),
+            new Bulma($this->root),
             new Foundation($this->root),
             new Tachyons($this->root)
         ];

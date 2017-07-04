@@ -114,6 +114,7 @@ abstract class Preset
     {
         unset(
             $packages['dependencies']['bootstrap'],
+            $packages['dependencies']['bulma'],
             $packages['dependencies']['tachyons-sass'],
             $packages['dependencies']['foundation-sites']
         );
@@ -149,8 +150,8 @@ abstract class Preset
         $files = new Filesystem;
         $files->delete("{$this->sageRoot}/resources/assets/styles/autoload/_tachyons.scss");
         $files->delete("{$this->sageRoot}/resources/assets/styles/autoload/_bootstrap.scss");
+        $files->delete("{$this->sageRoot}/resources/assets/styles/autoload/_bulma.scss");
         $files->delete("{$this->sageRoot}/resources/assets/styles/autoload/_foundation.scss");
-        $files->delete("{$this->sageRoot}/resources/assets/scripts/autoload/_tachyons.js");
         $files->delete("{$this->sageRoot}/resources/assets/scripts/autoload/_bootstrap.js");
         $files->delete("{$this->sageRoot}/resources/assets/scripts/autoload/_foundation.js");
     }
