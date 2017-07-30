@@ -13,7 +13,7 @@ class Installer
 
     public function __construct()
     {
-        $app = new Application();
+        $app = new Application;
         $app->add(new MetaCommand);
         $app->add(new PresetCommand);
         $app->add(new ConfigCommand);
