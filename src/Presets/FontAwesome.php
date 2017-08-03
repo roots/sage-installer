@@ -9,7 +9,7 @@ class FontAwesome extends Preset
     /** {@inheritdoc} */
     protected function updatePackagesArray(array $packages)
     {
-        $packages['dependencies']['font-awesome'] = '^4.7.0';
+        $packages['dependencies']['font-awesome'] = '~4.7';
         return $packages;
     }
 }
