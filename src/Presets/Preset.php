@@ -25,7 +25,7 @@ abstract class Preset
 
     /** @var object */
     public $package;
-    
+
     /** @var bool */
     public $addOn;
 
@@ -114,6 +114,7 @@ abstract class Preset
     {
         unset(
             $packages['dependencies']['bootstrap'],
+            $packages['dependencies']['popper.js'],
             $packages['dependencies']['bulma'],
             $packages['dependencies']['tachyons-sass'],
             $packages['dependencies']['foundation-sites']
