@@ -32,8 +32,8 @@
     }
   },
   "require": {
-    "illuminate/console": "~5.5",
-    "illuminate/filesystem": "~5.5",
+    "illuminate/console": "~5.4",
+    "illuminate/filesystem": "~5.4",
     "symfony/process": "~3.3"
   },
   "require-dev": {
