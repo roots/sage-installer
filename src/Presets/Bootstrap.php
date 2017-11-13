@@ -7,8 +7,8 @@ class Bootstrap extends Preset
     /** {@inheritdoc} */
     protected function updatePackagesArray(array $packages)
     {
-        $packages['dependencies']['bootstrap'] = '^4.0.0-beta';
-        $packages['dependencies']['popper.js'] = '~1.11';
+        $packages['dependencies']['bootstrap'] = 'v4.0.0-beta.2';
+        $packages['dependencies']['popper.js'] = '^1.12.3';
         return $packages;
     }
 }
