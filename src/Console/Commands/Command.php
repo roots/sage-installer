@@ -16,7 +16,7 @@ abstract class Command extends BaseCommand
     /** @var \Throwable Catchable error thrown during construction. */
     protected $configError;
 
-    /** @var string Path to theme root folder, e.g., /srv/www/example.dev/current/web/app/themes/sage */
+    /** @var string Path to theme root folder, e.g., /srv/www/example.test/current/web/app/themes/sage */
     protected $root;
 
     /** {@inheritdoc} */
