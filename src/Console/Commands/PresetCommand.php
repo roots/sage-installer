@@ -6,7 +6,6 @@ use Illuminate\Filesystem\Filesystem;
 use InvalidArgumentException;
 use Roots\Sage\Installer\Presets\Bootstrap;
 use Roots\Sage\Installer\Presets\Bulma;
-use Roots\Sage\Installer\Presets\FontAwesome;
 use Roots\Sage\Installer\Presets\Foundation;
 use Roots\Sage\Installer\Presets\None;
 use Roots\Sage\Installer\Presets\Preset;
@@ -43,20 +42,12 @@ class PresetCommand extends Command
             'Confirm overwriting files',
             null
         );
-        $this->addOption(
-            'fontawesome',
-            'F',
-            InputOption::VALUE_NONE,
-            'Install Font-Awesome',
-            null
-        );
     }
 
     /** {@inheritdoc} */
     protected function interact(InputInterface $input, OutputInterface $output)
     {
         $this->framework();
-        $this->fontAwesome();
     }
 
     /** {@inheritdoc} */
@@ -72,16 +63,8 @@ class PresetCommand extends Command
             return;
         }
         $preset->handle();
-        $this->extras();
         $this->info('Done.');
         $this->comment('Please run `yarn && yarn build` to compile your fresh scaffolding.');
-    }
-
-    protected function extras()
-    {
-        if ($this->option('fontawesome')) {
-            (new FontAwesome($this->root))->handle();
-        }
     }
 
     protected function framework()
@@ -93,14 +76,6 @@ class PresetCommand extends Command
         $framework = $this->choice('Which framework would you like to load?', $this->presets->names(), $default);
         $framework = array_search($framework, $this->presets->names());
         $this->input->setArgument('framework', $this->presets->slugs()[$framework]);
-    }
-
-    protected function fontAwesome()
-    {
-        $installFontAwesome = $this->option('fontawesome')
-            ?: $this->confirm('Do you want to install Font Awesome?');
-
-        $this->input->setOption('fontawesome', $installFontAwesome);
     }
 
     /**
