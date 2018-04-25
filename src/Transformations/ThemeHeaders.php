@@ -7,24 +7,24 @@ use Illuminate\Support\Collection;
 class ThemeHeaders
 {
     protected $content;
-    
+
     public $stylesheet;
 
     public $headers = [
         'Name'        => 'Sage Starter Theme',
         'URI'         => 'https://roots.io/sage/',
         'Description' => 'Sage is a WordPress starter theme.',
-        'Version'     => '9.0.0',
+        'Version'     => '9.0.1',
         'Author'      => 'Roots',
         'Author URI'  => 'https://roots.io/'
     ];
-    
+
     public function __construct($stylesheet = '')
     {
         $this->headers = new Collection($this->headers);
         $this->stylesheet = $stylesheet ?: getcwd().'/resources/style.css';
     }
-    
+
     public function getCurrentHeaders()
     {
         $this->content = file_get_contents($this->stylesheet);
