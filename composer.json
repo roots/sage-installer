@@ -7,8 +7,7 @@
     "theme",
     "foundation",
     "bootstrap",
-    "tachyons",
-    "fontawesome"
+    "tachyons"
   ],
   "license": "MIT",
   "authors": [
