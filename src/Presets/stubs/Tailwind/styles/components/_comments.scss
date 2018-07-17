@@ -1,0 +1,28 @@
+.comment-list {
+  @apply list-reset;
+}
+
+.comment-list ol {
+  list-style: none;
+}
+
+// TODO: .comment-form p { }
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+  @apply block w-full rounded border border-grey-light mt-2 mb-3 px-3 py-2 leading-loose;
+
+  &:focus {
+    @apply shadow-outline;
+  }
+}
+
+.comment-form input[type="submit"] {
+  @apply btn bg-grey-dark;
+
+  &:hover {
+    @apply bg-grey-darker;
+  }
+}
