@@ -118,7 +118,8 @@ abstract class Preset
             $packages['dependencies']['bulma'],
             $packages['dependencies']['tachyons-sass'],
             $packages['dependencies']['foundation-sites'],
-            $packages['devDependencies']['tailwindcss']);
+            $packages['devDependencies']['tailwindcss']
+        );
         return $packages;
     }
 
