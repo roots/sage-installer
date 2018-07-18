@@ -8,6 +8,17 @@ class Tailwind extends Preset
     protected function updatePackagesArray(array $packages)
     {
         $packages['devDependencies']['tailwindcss'] = '^0.6.4';
+
+        /** Add Tailwind specific at-rules */
+        $ignoreAtRules =& $packages['stylelint']['rules']['at-rule-no-unknown'][1]['ignoreAtRules'];
+        $tailwindAtRules = ['tailwind', 'apply', 'responsive', 'variants', 'screen'];
+
+        foreach ($tailwindAtRules as $rule) {
+            if (!in_array($rule, $ignoreAtRules)) {
+                array_push($ignoreAtRules, $rule);
+            }
+        }
+
         return $packages;
     }
 }
