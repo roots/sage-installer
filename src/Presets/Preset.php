@@ -117,8 +117,8 @@ abstract class Preset
             $packages['dependencies']['popper.js'],
             $packages['dependencies']['bulma'],
             $packages['dependencies']['tachyons-sass'],
-            $packages['dependencies']['foundation-sites']
-        );
+            $packages['dependencies']['foundation-sites'],
+            $packages['devDependencies']['tailwindcss']);
         return $packages;
     }
 

@@ -10,6 +10,7 @@ use Roots\Sage\Installer\Presets\Foundation;
 use Roots\Sage\Installer\Presets\None;
 use Roots\Sage\Installer\Presets\Preset;
 use Roots\Sage\Installer\Presets\Tachyons;
+use Roots\Sage\Installer\Presets\Tailwind;
 use Roots\Sage\Installer\Transformations\Presets;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -106,7 +107,8 @@ class PresetCommand extends Command
             new Bootstrap($this->root),
             new Bulma($this->root),
             new Foundation($this->root),
-            new Tachyons($this->root)
+            new Tachyons($this->root),
+            new Tailwind($this->root),
         ];
     }
 }
