@@ -4,6 +4,21 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = require('./config');
 
+/** Default PostCSS plugins */
+let postcssPlugins = [
+  require('tailwindcss')(`${config.paths.assets}/styles/tailwind.config.js`),
+  require('autoprefixer')(),
+];
+
+/** Add cssnano when optimizing */
+config.enabled.optimize
+  ? postcssPlugins.push(
+      require('cssnano')({
+        preset: ['default', { discardComments: { removeAll: true } }],
+      }),
+    )
+  : false;
+
 module.exports = {
   module: {
     rules: [
@@ -17,7 +32,12 @@ module.exports = {
             { loader: 'css' },
             {
               loader: 'postcss',
-              options: { config: { path: __dirname, ctx: config } },
+              options: {
+                parser: config.enabled.optimize
+                  ? 'postcss-safe-parser'
+                  : undefined,
+                plugins: postcssPlugins,
+              },
             },
             {
               loader: 'sass',
