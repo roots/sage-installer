@@ -4,11 +4,11 @@ h3,
 h4,
 h5,
 h6 {
-  @apply my-4 leading-loose;
+  @apply mb-2 leading-tight;
 }
 
 p {
-  @apply my-3 leading-normal;
+  @apply mb-3 leading-normal;
 }
 
 a {

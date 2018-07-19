@@ -6,13 +6,15 @@
   list-style: none;
 }
 
-// TODO: .comment-form p { }
+.comment-form p {
+  @apply mb-4;
+}
 
 .comment-form input[type="text"],
 .comment-form input[type="email"],
 .comment-form input[type="url"],
 .comment-form textarea {
-  @apply block w-full rounded border border-grey-light mt-2 mb-3 px-3 py-2 leading-loose;
+  @apply block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded;
 
   &:focus {
     @apply shadow-outline;
