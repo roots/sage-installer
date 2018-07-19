@@ -120,6 +120,12 @@ abstract class Preset
             $packages['dependencies']['foundation-sites'],
             $packages['devDependencies']['tailwindcss']
         );
+
+        /** Remove preset specific at-rules */
+        $ignoreAtRules =& $packages['stylelint']['rules']['at-rule-no-unknown'][1]['ignoreAtRules'];
+        $presetAtRules = ['tailwind', 'apply', 'responsive', 'variants', 'screen'];
+        $ignoreAtRules = array_values(array_diff($ignoreAtRules, $presetAtRules));
+
         return $packages;
     }
 
