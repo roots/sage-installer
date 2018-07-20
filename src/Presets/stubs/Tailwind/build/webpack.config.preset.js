@@ -29,7 +29,7 @@ module.exports = {
           fallback: 'style',
           use: [
             { loader: 'cache' },
-            { loader: 'css' },
+            { loader: 'css', options: { sourceMap: false } },
             {
               loader: 'postcss',
               options: {
@@ -37,11 +37,16 @@ module.exports = {
                   ? 'postcss-safe-parser'
                   : undefined,
                 plugins: postcssPlugins,
+                sourceMap: false,
               },
             },
             {
+              loader: 'resolve-url',
+              options: { silent: true, sourceMap: false },
+            },
+            {
               loader: 'sass',
-              options: { sourceComments: true },
+              options: { sourceComments: true, sourceMap: false },
             },
           ],
         }),
