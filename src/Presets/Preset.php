@@ -162,7 +162,7 @@ abstract class Preset
         $files->delete("{$this->sageRoot}/resources/assets/styles/autoload/_foundation.scss");
         $files->delete("{$this->sageRoot}/resources/assets/scripts/autoload/_bootstrap.js");
         $files->delete("{$this->sageRoot}/resources/assets/scripts/autoload/_foundation.js");
-        $files->delete("{$this->sageRoot}/resources/assets/scripts/build/webpack.config.preset.js");
+        $files->delete("{$this->sageRoot}/resources/assets/build/webpack.config.preset.js");
         $files->delete("{$this->sageRoot}/resources/assets/styles/tailwind.config.js");
     }
 
