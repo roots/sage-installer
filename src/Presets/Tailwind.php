@@ -15,7 +15,7 @@ class Tailwind extends Preset
 
         foreach ($tailwindAtRules as $rule) {
             if (!in_array($rule, $ignoreAtRules)) {
-                array_push($ignoreAtRules, $rule);
+                $ignoreAtRules[] = $rule;
             }
         }
 
