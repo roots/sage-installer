@@ -67,9 +67,9 @@ class PresetCommand extends Command
         $this->info('Done.');
         $this->comment('Please run `yarn && yarn build` to compile your fresh scaffolding.');
         $this->comment('');
-        $this->comment('Help support our open-source development efforts by contributing to Sage on OpenCollective:');
-        $this->comment('https://opencollective.com/sage');
-        $this->comment('Join us on the Roots Community Slack when you become a supporter!');
+        $this->comment('Help support our open-source development efforts by contributing to Sage via Patreon:');
+        $this->comment('https://www.patreon.com/rootsdev');
+        $this->comment('Join us on the Roots Slack when you become a supporter!');
     }
 
     protected function framework()
