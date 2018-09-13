@@ -7,7 +7,7 @@ class Tailwind extends Preset
     /** {@inheritdoc} */
     protected function updatePackagesArray(array $packages)
     {
-        $packages['devDependencies']['tailwindcss'] = '^0.6.4';
+        $packages['devDependencies']['tailwindcss'] = '^0.6.5';
 
         /** Add Tailwind specific at-rules */
         $ignoreAtRules =& $packages['stylelint']['rules']['at-rule-no-unknown'][1]['ignoreAtRules'];
