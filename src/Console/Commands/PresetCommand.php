@@ -67,6 +67,7 @@ class PresetCommand extends Command
         $preset->handle();
         $this->info(' Done.');
 
+        // phpcs:disable
         if ($this->confirm("Send anonymous usage data? \n<comment> We are only sending your framework selection and OS</comment>\n\n")) {
             $curl = curl_init();
             curl_setopt_array($curl, [
@@ -78,6 +79,7 @@ class PresetCommand extends Command
             $resp = curl_exec($curl);
             curl_close($curl);
         }
+        // phpcs:enable
 
         $this->comment('Please run `yarn && yarn build` to compile your fresh scaffolding.');
         $this->comment('');
