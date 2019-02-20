@@ -23,7 +23,7 @@
   height: auto;
 }
 
-+tablet() {
+@include tablet() {
   .alignleft {
     float: left;
     margin-right: ($spacer / 2);
