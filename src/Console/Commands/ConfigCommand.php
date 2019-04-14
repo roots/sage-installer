@@ -24,6 +24,8 @@ class ConfigCommand extends Command
         parent::configure();
         $this->configFile = "{$this->root}/resources/assets/config.json";
         $this->config = json_decode(file_get_contents($this->configFile), true);
+        $this->config['devUrl'] = 'http://' . basename($this->root) . '.test';
+
         $this->addOption(
             'url',
             null,
