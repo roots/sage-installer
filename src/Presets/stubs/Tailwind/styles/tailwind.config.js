@@ -11,7 +11,7 @@
  * Global Styles Plugin
  *
  * This plugin modifies Tailwind’s base styles using values from the theme.
- * https://next.tailwindcss.com/docs/adding-base-styles#using-a-plugin
+ * https://tailwindcss.com/docs/adding-base-styles#using-a-plugin
  */
 const globalStyles = ({ addBase, config }) => {
   addBase({
