@@ -1,5 +1,5 @@
 .comment-list {
-  @apply list-reset;
+  @apply list-none p-0;
 }
 
 .comment-list ol {
@@ -14,7 +14,7 @@
 .comment-form input[type="email"],
 .comment-form input[type="url"],
 .comment-form textarea {
-  @apply block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded;
+  @apply block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-700 border border-gray-500 rounded;
 
   &:focus {
     @apply shadow-outline;
@@ -22,9 +22,9 @@
 }
 
 .comment-form input[type="submit"] {
-  @apply btn bg-grey-dark;
+  @apply btn bg-gray-600;
 
   &:hover {
-    @apply bg-grey-darker;
+    @apply bg-gray-700;
   }
 }
