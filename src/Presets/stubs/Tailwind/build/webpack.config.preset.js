@@ -33,11 +33,13 @@ module.exports = {
             {
               loader: 'postcss',
               options: {
-                parser: config.enabled.optimize
+                postcssOptions: {
+                  parser: config.enabled.optimize
                   ? 'postcss-safe-parser'
                   : undefined,
-                plugins: postcssPlugins,
-                sourceMap: false,
+                  plugins: postcssPlugins,
+                  sourceMap: false,
+                }
               },
             },
             {

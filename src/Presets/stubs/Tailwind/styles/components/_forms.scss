@@ -14,7 +14,7 @@
 }
 
 .search-form .search-submit {
-  @apply inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-gray-100 bg-gray-500;
+  @apply inline-block align-middle text-center select-none border font-normal whitespace-nowrap py-2 px-4 rounded text-base leading-normal no-underline text-gray-100 bg-gray-500;
 
   &:hover {
     @apply bg-gray-400;

@@ -7,7 +7,7 @@ class Tailwind extends Preset
     /** {@inheritdoc} */
     protected function updatePackagesArray(array $packages)
     {
-        $packages['devDependencies']['tailwindcss'] = '^1.0.0';
+        $packages['devDependencies']['tailwindcss'] = '^2.0.1';
 
         return $packages;
     }
