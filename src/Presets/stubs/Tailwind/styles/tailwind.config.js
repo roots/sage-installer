@@ -64,9 +64,6 @@ module.exports = {
       },
       transparent: 'transparent',
     },
-    shadows: {
-      outline: '0 0 0 3px rgba(82,93,220,0.3)',
-    },
     container: {
       center: true,
       padding: '1rem',
