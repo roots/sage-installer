@@ -4,7 +4,8 @@ namespace Roots\Sage\Installer\Console\Commands;
 
 use Illuminate\Filesystem\Filesystem;
 use InvalidArgumentException;
-use Roots\Sage\Installer\Presets\Bootstrap;
+use Roots\Sage\Installer\Presets\Bootstrap5;
+use Roots\Sage\Installer\Presets\Bootstrap4;
 use Roots\Sage\Installer\Presets\Bulma;
 use Roots\Sage\Installer\Presets\Foundation;
 use Roots\Sage\Installer\Presets\None;
