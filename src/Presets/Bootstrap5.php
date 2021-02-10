@@ -2,12 +2,14 @@
 
 namespace Roots\Sage\Installer\Presets;
 
-class Foundation extends Preset
+class Bootstrap5 extends Preset
 {
     /** {@inheritdoc} */
     protected function updatePackagesArray(array $packages)
     {
-        $packages['dependencies']['foundation-sites'] = '~6.6.3';
+        $packages['dependencies']['bootstrap'] = 'v5.0.0-beta2'; // 5.x currently in beta
+		// (popper.js already included)
+
         return $packages;
     }
 }

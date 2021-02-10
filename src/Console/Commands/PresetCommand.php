@@ -120,7 +120,8 @@ class PresetCommand extends Command
     {
         return [
             new None($this->root),
-            new Bootstrap($this->root),
+            new Bootstrap4($this->root),
+            new Bootstrap5($this->root),
             new Bulma($this->root),
             new Foundation($this->root),
             new Tachyons($this->root),

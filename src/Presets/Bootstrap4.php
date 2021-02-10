@@ -2,7 +2,7 @@
 
 namespace Roots\Sage\Installer\Presets;
 
-class Bootstrap extends Preset
+class Bootstrap4 extends Preset
 {
     /** {@inheritdoc} */
     protected function updatePackagesArray(array $packages)
