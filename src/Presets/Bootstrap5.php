@@ -8,8 +8,7 @@ class Bootstrap5 extends Preset
     protected function updatePackagesArray(array $packages)
     {
         $packages['dependencies']['bootstrap'] = 'v5.0.1';
-        // (popper.js already included)
-
+        $packages['dependencies']['popper.js'] = '^2.9.2';
         return $packages;
     }
 }
