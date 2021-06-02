@@ -23,7 +23,7 @@
   height: auto;
 }
 
-@include tablet() {
+@include media-breakpoint-up(sm) {
   .alignleft {
     float: left;
     margin-right: ($spacer / 2);
@@ -36,21 +36,21 @@
 }
 
 /** Captions */
+.wp-caption {
+  @extend .figure;
+}
 
-// TODO: .wp-caption {}
-// TODO: .wp-caption img {}
-// TODO: .wp-caption-text {}
+.wp-caption img {
+  @extend .figure-img;
+  @extend .img-fluid;
+}
+
+.wp-caption-text {
+  @extend .figure-caption;
+}
 
 /** Text meant only for screen readers */
 .screen-reader-text {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  color: #000;
-  background: #fff;
+  @extend .visually-hidden;
+  @extend .visually-hidden-focusable;
 }
