@@ -14,7 +14,7 @@ class ThemeHeaders
         'Name'        => 'Sage Starter Theme',
         'URI'         => 'https://roots.io/sage/',
         'Description' => 'Sage is a WordPress starter theme.',
-        'Version'     => '9.0.1',
+        'Version'     => '9.1.0',
         'Author'      => 'Roots',
         'Author URI'  => 'https://roots.io/'
     ];
